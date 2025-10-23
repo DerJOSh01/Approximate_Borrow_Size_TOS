@@ -1,0 +1,21 @@
+{
+  "script": "approx_borrow_size_analysis.py",
+  "data_dir": "./data",
+  "days": 5,
+  "topN": 9,
+  "overview_rank": "alpha",
+  "detail_order": "alpha",
+  "detail": true,
+  "x_mode": "index",
+  "borrow_view": "absolute",
+  "delta_baseline": "first",
+  "borrow_zoom_frac": 0.0,
+  "borrow_zoom_on": false,
+  "borrow_floor_mode": "min",
+  "initial_symbol": "",
+  "sep": "",
+  "symbol_col": "",
+  "price_col": "",
+  "borrow_col": "",
+  "date_mode": "data"
+}
