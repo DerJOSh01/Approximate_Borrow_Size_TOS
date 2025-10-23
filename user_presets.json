@@ -1,6 +1,6 @@
 {
-  "script": "approx_borrow_size_analysis.py",
-  "data_dir": "./data",
+  "script": "/codespace/approx_borrow_size_analysis.py",
+  "data_dir": "/codespace/data/Live Data",
   "days": 5,
   "topN": 9,
   "overview_rank": "alpha",
