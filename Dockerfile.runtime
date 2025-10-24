@@ -16,9 +16,12 @@ RUN /home/app/venv/bin/pip install -r /home/app/requirements.txt
 
 # Set the application name.
 RUN set-cont-env APP_NAME "Xterm"
-RUN set-cont-env DARK_MODE "1"
 
 # Copy the start script.
 COPY scripts/startapp.sh /startapp.sh
+
+# Enable window manager
+RUN mkdir -p /etc/openbox
+RUN echo "<openbox_selection/>" >> /etc/openbox/main-window-selection.xml
 
 WORKDIR /codespace
