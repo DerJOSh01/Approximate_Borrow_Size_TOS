@@ -1,0 +1,24 @@
+# Pull the baseimage.
+FROM jlesage/baseimage-gui:alpine-3.22-v4
+
+# Install OS Dependencies
+RUN add-pkg xterm font-terminus bash python3 py3-pip python3-tkinter
+
+# Create app user home directory
+RUN mkdir -p /home/app
+RUN chown 1000:1000 /home/app
+ENV HOME /home/app
+
+# Precompile python app dependencies
+RUN python -m venv /tmp/venv
+ADD requirements.txt /tmp 
+RUN cd /tmp && /tmp/venv/bin/pip install -r requirements.txt
+
+# Set the application name.
+RUN set-cont-env APP_NAME "Xterm"
+RUN set-cont-env DARK_MODE "1"
+
+# Copy the start script.
+COPY scripts/startapp.sh /startapp.sh
+
+WORKDIR /codespace
