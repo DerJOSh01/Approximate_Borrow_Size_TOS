@@ -10,9 +10,9 @@ RUN chown 1000:1000 /home/app
 ENV HOME /home/app
 
 # Precompile python app dependencies
-RUN python -m venv /tmp/venv
-ADD requirements.txt /tmp 
-RUN cd /tmp && /tmp/venv/bin/pip install -r requirements.txt
+ADD ./requirements.txt /home/app
+RUN python -m venv /home/app/venv
+RUN /home/app/venv/bin/pip install -r /home/app/requirements.txt
 
 # Set the application name.
 RUN set-cont-env APP_NAME "Xterm"
