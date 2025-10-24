@@ -107,3 +107,8 @@ BZAP = ∑ (Price i ​× Borrow i​) / ∑ Borrow i​
 
 | <img width="321" height="258" alt="image" src="https://github.com/user-attachments/assets/c673190b-bf56-4d99-a90b-37e2e632f679" /> | <img width="335" height="258" alt="image" src="https://github.com/user-attachments/assets/5fd6093c-aa5a-4018-af7a-4d071cae7d82" /> |
 
+
+
+# How to run.
+
+`make app-up`
