@@ -152,3 +152,20 @@ BZAP = ∑ (Price i ​× Borrow i​) / ∑ Borrow i​
 | ---------------------Overview Grid--------------------- | ------------------------Detail View----------------------- |
 
 | <img width="321" height="258" alt="image" src="https://github.com/user-attachments/assets/c673190b-bf56-4d99-a90b-37e2e632f679" /> | <img width="335" height="258" alt="image" src="https://github.com/user-attachments/assets/5fd6093c-aa5a-4018-af7a-4d071cae7d82" /> |
+
+## Setting your Forked tradenote-selfhost Repository to Private
+Forked repositories on GitHub are public by default, which can pose a security risk if you commit sensitive files. To protect your data, convert your forked repository to private by making it standalone first. Follow these steps:
+
+- **Navigate to Repository Settings**: Go to your forked repository on GitHub and click on the **Settings** tab at the top.
+- **Leave the Fork Network**: Scroll down to the **Danger Zone** section at the bottom of the General settings page. Click the **Leave fork network** button to unlink your repository from the original fork network, transforming it into a standalone repository. Confirm the action when prompted.
+- **Change Visibility**: Once unlinked, the **Change visibility** button in the Danger Zone will become available. Click it, select **Change to private**, and confirm the change. Your repository is now private and inaccessible to the public.
+
+### Updating Your Private Repository with latest changes from this repository
+After converting your forked repository to private, you may still want to incorporate updates from the original repository. To do this, use the make command:
+
+```bash
+make sync-code
+```
+- Preserves Your Files: Any additional files or folders you created will remain untouched.
+- Overwrites Matching Files: If files exist both in your repository and the upstream source, they will be overwritten with the latest version.
+- Best Practice: Before committing changes to your private repository, run a git diff to review modifications and ensure nothing important is unintentionally overwritten.
