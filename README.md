@@ -51,6 +51,7 @@ To save the files and changes you made, click on the shown symbol and then **✓
 ![alt text](/pictures/image.png)  
 
 After that, a window on the right side will open where you have to write a commit message. Once done, you can close the window and the files are saved.
+Now sync the files to origin.
 
 **All existing files in `/data` can be savely deleted - they are for demonstration only.**
 
